@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class OptionTests {
+public class OptionTests {
 
 
 
