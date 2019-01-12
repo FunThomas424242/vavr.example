@@ -8,6 +8,10 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
+/**
+ * Vavr Tupel stellt den Tupel Datentyp in Java zur Verfügung.
+ * Tupel werden nur mit bis zu 8 Parametern angeboten.
+ */
 public class TupleTests {
 
     @Test
