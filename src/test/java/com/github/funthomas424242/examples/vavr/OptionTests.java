@@ -9,6 +9,10 @@ import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Vavr Option dient der Vermeidung von Nullpointer und Exceptionhandling.
+ * Die Vavr Option verfügt über mehr Features aus Guava Optional.
+ */
 public class OptionTests {
 
 
