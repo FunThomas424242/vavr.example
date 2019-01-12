@@ -13,27 +13,11 @@ public class Person {
 
     protected LocalDate birthday;
 
-//    public Person() {
-//
-//    }
-
     public Person(final String vorname, final String surname, final LocalDate birthday) {
         this.vorname = vorname;
         this.surname = surname;
         this.birthday = birthday;
     }
-
-//    public void setBirthday(LocalDate birthday) {
-//        this.birthday = birthday;
-//    }
-//
-//    public void setVorname(String vorname) {
-//        this.vorname = vorname;
-//    }
-//
-//    public void setSurname(String surname) {
-//        this.surname = surname;
-//    }
 
     public String getVorname() {
         return vorname;
