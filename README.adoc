@@ -1,0 +1,9 @@
+= vavr.example
+
+Beispiele zur Nutzung des Vavr Frameworks
+
+
+= Quellen im Neuland
+
+* https://www.baeldung.com/vavr
+
