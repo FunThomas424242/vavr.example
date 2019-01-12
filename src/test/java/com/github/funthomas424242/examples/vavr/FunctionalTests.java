@@ -6,6 +6,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Sinn eines Funktionals ist es einen Typ bereitzustellen in welchem Funktionen
+ * gespeichert werden können. Varvr definiert Solche Speicher mit bis zu 8 Parametern.
+ *
+ */
 public class FunctionalTests {
 
     @Test
