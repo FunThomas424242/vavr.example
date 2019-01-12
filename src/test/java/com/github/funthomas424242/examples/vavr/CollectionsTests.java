@@ -9,7 +9,7 @@ public class CollectionsTests {
     @Test
     public void createValidImmutableList() {
 
-        final List immutableList = List.of(2,3,5,7);
+        final List<Integer> immutableList = List.of(2,3,5,7);
         Assertions.assertEquals(new Integer(2),immutableList.get(0));
         Assertions.assertEquals(new Integer(3),immutableList.get(1));
         Assertions.assertEquals(new Integer(5),immutableList.get(2));
