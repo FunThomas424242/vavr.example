@@ -3,6 +3,7 @@ package com.github.funthomas424242.examples.vavr;
 import io.vavr.collection.Seq;
 import io.vavr.control.Validation;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -11,6 +12,8 @@ import static java.time.temporal.ChronoUnit.DAYS;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@DisplayName("Mit der Klasse Validation lassen sich Validationen durchführen und Fehlermeldungen aller fehlgeschlagenen" +
+        " Validtionen sammeln")
 public class ValidationTest {
 
     private static PersonValidator validator;
