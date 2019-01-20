@@ -4,6 +4,8 @@ import io.vavr.concurrent.Future;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.concurrent.CompletableFuture;
+
 import static java.util.concurrent.Executors.newSingleThreadExecutor;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -62,5 +64,31 @@ public class FutureTest {
         assertTrue(resultFuture.isFailure());
     }
 
+    @Test
+    public void whenCallMap_thenCorrect() {
+        Future<String> futureResult = Future.of(() -> "from Baeldung")
+                .map(a -> "Hello " + a)
+                .await();
+
+        assertEquals(futureResult.get(), "Hello from Baeldung");
+    }
+
+    @Test
+    public void whenCallFlatMap_thenCorrect() {
+        Future<Object> futureMap = Future.of(() -> 1)
+                .flatMap((i) -> Future.of(() -> "Hello: " + i));
+
+        assertEquals(futureMap.get(), "Hello: 1");
+    }
+
+    @Test
+    public void whenConvertToCompletableFuture_thenCorrect()
+            throws Exception {
+
+        CompletableFuture<String> convertedFuture = Future.of(() -> "Hello: ")
+                .toCompletableFuture();
+
+        assertEquals(convertedFuture.get(), "Hello: ");
+    }
 
 }
