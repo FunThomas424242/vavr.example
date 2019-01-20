@@ -50,4 +50,17 @@ public class FutureTest {
         assertThrows(ArithmeticException.class, resultFuture::get);
     }
 
+
+    @Test
+    @DisplayName("Future Berechnung endet nach Ausführung.")
+    public void whenDivideByZero_thenCorrect() {
+        Future<Integer> resultFuture = Future.of(() -> 10 / 0)
+                .await();
+
+        assertTrue(resultFuture.isCompleted());
+        assertFalse(resultFuture.isSuccess());
+        assertTrue(resultFuture.isFailure());
+    }
+
+
 }
